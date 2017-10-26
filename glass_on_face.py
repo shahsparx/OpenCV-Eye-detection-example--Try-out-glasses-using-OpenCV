@@ -47,7 +47,6 @@ if len(centers) > 0:
     # Create a mask and generate it's inverse.
     gray_glasses = cv2.cvtColor(overlay_img, cv2.COLOR_BGR2GRAY)
     ret, mask = cv2.threshold(gray_glasses, 110, 255, cv2.THRESH_BINARY)
-    
     mask_inv = cv2.bitwise_not(mask)
     temp = cv2.bitwise_and(image, image, mask=mask)
 
